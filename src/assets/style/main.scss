@@ -1,0 +1,44 @@
+@import '~vuetify/dist/vuetify.min.css';
+
+// $blue: #1d70b7;
+// $white: #f9f9f9;
+// $green: #5cb85c;
+// $grey-darker: #444;
+// $grey: #444;
+
+body {
+  cursor: default;
+}
+
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.4s;
+}
+.v-enter,
+.v-leave-to {
+  opacity: 0;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transform: translateY(0);
+  transition: 0.4s;
+}
+.fade-enter,
+.fade-leave-to {
+  transform: translateY(-5px);
+  opacity: 0;
+}
+
+.list-move {
+  transition: transform 0.3s;
+}
+
+.list-enter-active,
+.list-leave-active {
+  transition: opacity 0.3s;
+}
+.list-enter,
+.list-leave-to {
+  opacity: 0;
+}

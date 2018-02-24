@@ -1,0 +1,89 @@
+{
+  "status": true,
+  "response": {
+    "_id": "58d2b6285063c91d29bedec4",
+    "name": "Android Testing App",
+    "owner": {
+      "_id": "56e744c90174c74a6b25367b",
+      "fullname": "Applivery Dev",
+      "name": "AppliveryDev",
+      "accountType": "enterpriseplus",
+      "enterprise": { "domains": ["apps.applivery.com"] },
+      "limits": { "downloads": 4000, "teams": 50, "sites": 100, "builds": 100, "apps": 50 }
+    },
+    "creator": {
+      "_id": "56e744c90174c74a6b25367b",
+      "fullname": "Applivery Dev",
+      "name": "AppliveryDev"
+    },
+    "webhooks": [],
+    "crashesCount": 0,
+    "feedbackCount": 11,
+    "sitesCount": 1,
+    "totalDownloads": 22,
+    "buildsCount": 3,
+    "invited": [],
+    "teams": [
+      {
+        "_id": "56e745110174c74a6b25367e",
+        "name": "Android Team",
+        "members": [
+          {
+            "member": {
+              "_id": "54c512a1ec672ffc2dbf9d0e",
+              "fullname": "Cesar Trigo",
+              "name": "CesarTrigo",
+              "email": "cesartrigo@gmail.com"
+            },
+            "role": "admin"
+          },
+          {
+            "role": "admin",
+            "member": {
+              "_id": "59e733066e6a80d77c58319a",
+              "fullname": "Manuel RB",
+              "email": "manu@applivery.com"
+            }
+          },
+          {
+            "role": "developer",
+            "member": {
+              "_id": "591c03925bc2f4c22b78b524",
+              "fullname": "Manuel Rebollo Báez",
+              "email": "manuel.rebollo@gigigo.com"
+            }
+          }
+        ]
+      }
+    ],
+    "members": [],
+    "active": true,
+    "modified": "2018-02-16T09:22:32.344Z",
+    "created": "2017-03-22T17:36:40.492Z",
+    "so": ["android"],
+    "downloads": { "2018feb": 1, "2017nov": 5, "2017oct": 16 },
+    "description":
+      "<p style=\"margin-bottom: 15px; padding: 0px; text-align: justify; font-family: \" open=\"\" sans\",=\"\" arial,=\"\" sans-serif;\"=\"\">Lorem <span style=\"font-weight: bold;\">ipsum</span> dolor sit amet, consectetur adipiscing elit. Pellentesque ut quam sed metus malesuada dapibus vitae non magna. Donec sem elit, <span style=\"font-weight: bold;\">consequat</span> vitae consectetur eget, porttitor sit amet dui. Sed eu eros ut neque convallis rhoncus quis non nulla. Sed vel ex nec magna cursus interdum at sit amet ante. Nullam turpis arcu, venenatis in mattis at, luctus vel odio. In non viverra est. Cras eleifend ligula mattis massa egestas, sed aliquet <span style=\"font-weight: bold;\">risus</span> facilisis. Proin accumsan ultrices auctor.</p>",
+    "sdk": {
+      "android": {
+        "lastBuildVersion": "559",
+        "lastBuildId": "5a86a098c09f0aff430cb5e8",
+        "ota": true,
+        "forceUpdate": true,
+        "updateMsg":
+          "There is a new version available for download! Do you want to update to the latest version?",
+        "mustUpdateMsg": "Sorry, you must update the App to the latest version to continue.",
+        "minVersion": "2",
+        "installed": { "version": "2.4.3", "date": "2017-12-22T11:30:56.978Z" }
+      },
+      "ios": {
+        "ota": true,
+        "forceUpdate": true,
+        "updateMsg":
+          "There is a new version available for download! Do you want to update to the latest version?",
+        "mustUpdateMsg": "Sorry, you must update the App to the latest version to continue.",
+        "minVersion": "2"
+      }
+    }
+  }
+}

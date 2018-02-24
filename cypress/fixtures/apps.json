@@ -1,0 +1,472 @@
+{
+  "status": true,
+  "response": [
+    {
+      "_id": "58e274945551fb411450fdf7",
+      "name": "Apps Hub Sample App",
+      "owner": {
+        "_id": "56e744c90174c74a6b25367b",
+        "fullname": "Applivery Dev",
+        "name": "AppliveryDev",
+        "accountType": "enterpriseplus",
+        "enterprise": { "domains": ["apps.applivery.com"] },
+        "limits": { "downloads": 4000, "teams": 50, "sites": 100, "builds": 100, "apps": 50 }
+      },
+      "creator": {
+        "_id": "56e744c90174c74a6b25367b",
+        "fullname": "Applivery Dev",
+        "name": "AppliveryDev"
+      },
+      "downloads": { "2017may": 2 },
+      "webhooks": [],
+      "sdk": {
+        "android": {
+          "updateMsg":
+            "There is a new version available for download! Do you want to update to the latest version?",
+          "mustUpdateMsg": "Sorry, you must update the App to the latest version to continue.",
+          "ota": false,
+          "forceUpdate": false
+        },
+        "ios": {
+          "updateMsg":
+            "There is a new version available for download! Do you want to update to the latest version?",
+          "mustUpdateMsg": "Sorry, you must update the App to the latest version to continue.",
+          "ota": false,
+          "forceUpdate": false
+        }
+      },
+      "crashesCount": 0,
+      "feedbackCount": 0,
+      "sitesCount": 0,
+      "totalDownloads": 2,
+      "buildsCount": 1,
+      "invited": [],
+      "teams": [],
+      "members": [
+        {
+          "role": "admin",
+          "member": { "_id": "58e274135551fb411450fdf6", "fullname": "Eduardo Hidalgo" }
+        }
+      ],
+      "active": true,
+      "modified": "2018-02-16T08:57:11.385Z",
+      "created": "2017-04-03T16:13:08.241Z",
+      "so": ["android"],
+      "description":
+        "This is the <span style=\"font-weight: bold;\">awesome</span> description of this <span style=\"text-decoration-line: underline;\">amazing</span> App"
+    },
+    {
+      "_id": "58d2b6285063c91d29bedec4",
+      "name": "Android Testing App",
+      "owner": {
+        "_id": "56e744c90174c74a6b25367b",
+        "fullname": "Applivery Dev",
+        "name": "AppliveryDev",
+        "accountType": "enterpriseplus",
+        "enterprise": { "domains": ["apps.applivery.com"] },
+        "limits": { "downloads": 4000, "teams": 50, "sites": 100, "builds": 100, "apps": 50 }
+      },
+      "creator": {
+        "_id": "56e744c90174c74a6b25367b",
+        "fullname": "Applivery Dev",
+        "name": "AppliveryDev"
+      },
+      "downloads": { "2017nov": 5, "2017oct": 16 },
+      "webhooks": [],
+      "sdk": {
+        "android": {
+          "minVersion": "2",
+          "installed": { "version": "2.4.3", "date": "2017-12-22T11:30:56.978Z" },
+          "updateMsg":
+            "There is a new version available for download! Do you want to update to the latest version?",
+          "mustUpdateMsg": "Sorry, you must update the App to the latest version to continue.",
+          "ota": true,
+          "forceUpdate": true
+        },
+        "ios": {
+          "minVersion": "2",
+          "updateMsg":
+            "There is a new version available for download! Do you want to update to the latest version?",
+          "mustUpdateMsg": "Sorry, you must update the App to the latest version to continue.",
+          "ota": true,
+          "forceUpdate": true
+        }
+      },
+      "crashesCount": 0,
+      "feedbackCount": 11,
+      "sitesCount": 1,
+      "totalDownloads": 21,
+      "buildsCount": 3,
+      "invited": [],
+      "teams": [
+        {
+          "_id": "56e745110174c74a6b25367e",
+          "name": "Android Team",
+          "members": [
+            { "member": "54c512a1ec672ffc2dbf9d0e", "role": "admin" },
+            { "role": "admin", "member": "59e733066e6a80d77c58319a" },
+            { "role": "developer", "member": "591c03925bc2f4c22b78b524" }
+          ]
+        }
+      ],
+      "members": [],
+      "active": true,
+      "modified": "2018-02-16T09:22:32.344Z",
+      "created": "2017-03-22T17:36:40.492Z",
+      "so": ["android"],
+      "description":
+        "<p style=\"margin-bottom: 15px; padding: 0px; text-align: justify; font-family: \" open=\"\" sans\",=\"\" arial,=\"\" sans-serif;\"=\"\">Lorem <span style=\"font-weight: bold;\">ipsum</span> dolor sit amet, consectetur adipiscing elit. Pellentesque ut quam sed metus malesuada dapibus vitae non magna. Donec sem elit, <span style=\"font-weight: bold;\">consequat</span> vitae consectetur eget, porttitor sit amet dui. Sed eu eros ut neque convallis rhoncus quis non nulla. Sed vel ex nec magna cursus interdum at sit amet ante. Nullam turpis arcu, venenatis in mattis at, luctus vel odio. In non viverra est. Cras eleifend ligula mattis massa egestas, sed aliquet <span style=\"font-weight: bold;\">risus</span> facilisis. Proin accumsan ultrices auctor.</p>"
+    },
+    {
+      "_id": "58d2b6235063c91d29bedec3",
+      "name": "iOS App",
+      "owner": {
+        "_id": "56e744c90174c74a6b25367b",
+        "fullname": "Applivery Dev",
+        "name": "AppliveryDev",
+        "accountType": "enterpriseplus",
+        "enterprise": { "domains": ["apps.applivery.com"] },
+        "limits": { "downloads": 4000, "teams": 50, "sites": 100, "builds": 100, "apps": 50 }
+      },
+      "creator": {
+        "_id": "56e744c90174c74a6b25367b",
+        "fullname": "Applivery Dev",
+        "name": "AppliveryDev"
+      },
+      "webhooks": [],
+      "sdk": {
+        "android": {
+          "updateMsg":
+            "There is a new version available for download! Do you want to update to the latest version?",
+          "mustUpdateMsg": "Sorry, you must update the App to the latest version to continue.",
+          "ota": false,
+          "forceUpdate": false
+        },
+        "ios": {
+          "updateMsg":
+            "There is a new version available for download! Do you want to update to the latest version?",
+          "mustUpdateMsg": "Sorry, you must update the App to the latest version to continue.",
+          "ota": false,
+          "forceUpdate": false
+        }
+      },
+      "crashesCount": 0,
+      "feedbackCount": 0,
+      "sitesCount": 0,
+      "totalDownloads": 0,
+      "buildsCount": 0,
+      "invited": [],
+      "teams": [
+        {
+          "_id": "56e744fb0174c74a6b25367d",
+          "name": "iOS Team",
+          "members": [
+            { "member": "54c7cfd24dcfba9d40159388", "role": "admin" },
+            { "member": "54c512a1ec672ffc2dbf9d0e", "role": "admin" },
+            { "role": "admin", "member": "58d82c8f5551fb411450f29e" }
+          ]
+        }
+      ],
+      "members": [
+        {
+          "role": "developer",
+          "member": { "_id": "58e274135551fb411450fdf6", "fullname": "Eduardo Hidalgo" }
+        }
+      ],
+      "active": true,
+      "modified": "2017-03-22T17:36:35.817Z",
+      "created": "2017-03-22T17:36:35.817Z",
+      "so": [],
+      "description": ""
+    },
+    {
+      "_id": "5818877d3cea45dd3f271171",
+      "name": "GeotagMyPic",
+      "owner": {
+        "_id": "56e744c90174c74a6b25367b",
+        "fullname": "Applivery Dev",
+        "name": "AppliveryDev",
+        "accountType": "enterpriseplus",
+        "enterprise": { "domains": ["apps.applivery.com"] },
+        "limits": { "downloads": 4000, "teams": 50, "sites": 100, "builds": 100, "apps": 50 }
+      },
+      "creator": {
+        "_id": "56e744c90174c74a6b25367b",
+        "fullname": "Applivery Dev",
+        "name": "AppliveryDev"
+      },
+      "downloads": { "2018feb": 2, "2017feb": 7, "2016nov": 6 },
+      "webhooks": [],
+      "sdk": {
+        "android": {
+          "updateMsg":
+            "There is a new version available for download! Do you want to update to the latest version?",
+          "mustUpdateMsg": "Sorry, you must update the App to the latest version to continue.",
+          "ota": false,
+          "forceUpdate": false
+        },
+        "ios": {
+          "updateMsg":
+            "There is a new version available for download! Do you want to update to the latest version?",
+          "mustUpdateMsg": "Sorry, you must update the App to the latest version to continue.",
+          "ota": false,
+          "forceUpdate": false
+        }
+      },
+      "crashesCount": 0,
+      "feedbackCount": 0,
+      "sitesCount": 1,
+      "totalDownloads": 15,
+      "buildsCount": 3,
+      "invited": [],
+      "teams": [],
+      "members": [
+        {
+          "role": "client",
+          "member": {
+            "_id": "54c512a1ec672ffc2dbf9d0e",
+            "fullname": "Cesar Trigo",
+            "name": "CesarTrigo"
+          }
+        },
+        {
+          "role": "admin",
+          "member": {
+            "_id": "54ff836e916e2f163b466e06",
+            "fullname": "Test Account",
+            "name": "Test"
+          }
+        },
+        {
+          "role": "developer",
+          "member": {
+            "_id": "5552806cc200fd1b229894c9",
+            "fullname": "Applivery Support",
+            "name": "Support"
+          }
+        },
+        {
+          "role": "developer",
+          "member": { "_id": "58e274135551fb411450fdf6", "fullname": "Eduardo Hidalgo" }
+        }
+      ],
+      "active": true,
+      "modified": "2016-11-01T12:15:57.034Z",
+      "created": "2016-11-01T12:15:57.034Z",
+      "so": ["ios", "android"],
+      "description": ""
+    },
+    {
+      "_id": "56e7503b0174c74a6b253688",
+      "name": "[Deprecated] iOS SDK",
+      "owner": {
+        "_id": "56e744c90174c74a6b25367b",
+        "fullname": "Applivery Dev",
+        "name": "AppliveryDev",
+        "accountType": "enterpriseplus",
+        "enterprise": { "domains": ["apps.applivery.com"] },
+        "limits": { "downloads": 4000, "teams": 50, "sites": 100, "builds": 100, "apps": 50 }
+      },
+      "creator": {
+        "_id": "56e744c90174c74a6b25367b",
+        "fullname": "Applivery Dev",
+        "name": "AppliveryDev"
+      },
+      "downloads": {
+        "2017mar": 1,
+        "2016dec": 1,
+        "2016nov": 4,
+        "2016sep": 1,
+        "2016aug": 4,
+        "2016may": 1,
+        "2016apr": 16
+      },
+      "webhooks": [
+        {
+          "config": {
+            "incoming_webhook": {
+              "url":
+                "https://hooks.slack.com/services/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",
+              "configuration_url": "https://applivery.slack.com/services/B0ZAZ4U4C",
+              "channel_id": "C0Z9TF41Z",
+              "channel": "#cd"
+            },
+            "team_id": "T0JS4U3NU",
+            "team_name": "Applivery.com",
+            "scope": "identify,incoming-webhook",
+            "access_token": "xoxp-18888955776-18888340402-31519990627-94604395ce",
+            "ok": true
+          },
+          "triggers": ["upload", "feedback", "bug"],
+          "type": "slack",
+          "_id": "5709169dbcec46c1562aaf27"
+        }
+      ],
+      "sdk": {
+        "android": {
+          "updateMsg":
+            "There is a new version available for download! Do you want to update to the latest version?",
+          "mustUpdateMsg": "Sorry, you must update the App to the latest version to continue.",
+          "ota": true,
+          "forceUpdate": false
+        },
+        "ios": {
+          "minVersion": "1.2",
+          "installed": { "version": "1.2", "date": "2017-03-21T01:09:11.821Z" },
+          "updateMsg":
+            "There is a new version available for download! Do you want to update to the latest version?",
+          "mustUpdateMsg": "Sorry, you must update the App to the latest version to continue.",
+          "ota": true,
+          "forceUpdate": false
+        }
+      },
+      "crashesCount": 0,
+      "feedbackCount": 9,
+      "sitesCount": 0,
+      "totalDownloads": 28,
+      "buildsCount": 13,
+      "invited": [],
+      "teams": [
+        {
+          "_id": "56e744fb0174c74a6b25367d",
+          "name": "iOS Team",
+          "members": [
+            { "member": "54c7cfd24dcfba9d40159388", "role": "admin" },
+            { "member": "54c512a1ec672ffc2dbf9d0e", "role": "admin" },
+            { "role": "admin", "member": "58d82c8f5551fb411450f29e" }
+          ]
+        }
+      ],
+      "members": [
+        {
+          "role": "developer",
+          "member": {
+            "_id": "561cab7f866d9cab3c192717",
+            "fullname": "Sergio Martínez",
+            "name": "sergio_martinez"
+          }
+        },
+        {
+          "role": "client",
+          "member": {
+            "_id": "54c50a608464359f2c5fa35b",
+            "fullname": "Applivery S.L.",
+            "name": "Applivery"
+          }
+        }
+      ],
+      "active": true,
+      "modified": "2016-03-14T23:58:51.828Z",
+      "created": "2016-03-14T23:58:51.828Z",
+      "so": ["ios"],
+      "description": ""
+    },
+    {
+      "_id": "56e744ec0174c74a6b25367c",
+      "name": "[Deprecated] Android Sample App",
+      "owner": {
+        "_id": "56e744c90174c74a6b25367b",
+        "fullname": "Applivery Dev",
+        "name": "AppliveryDev",
+        "accountType": "enterpriseplus",
+        "enterprise": { "domains": ["apps.applivery.com"] },
+        "limits": { "downloads": 4000, "teams": 50, "sites": 100, "builds": 100, "apps": 50 }
+      },
+      "creator": {
+        "_id": "56e744c90174c74a6b25367b",
+        "fullname": "Applivery Dev",
+        "name": "AppliveryDev"
+      },
+      "downloads": {
+        "2018feb": 4,
+        "2017may": 2,
+        "2017apr": 13,
+        "2017mar": 1,
+        "2016dec": 1,
+        "2016nov": 36,
+        "2016may": 2,
+        "2016apr": 33,
+        "2016mar": 2
+      },
+      "webhooks": [
+        {
+          "config": {
+            "incoming_webhook": {
+              "url":
+                "https://hooks.slack.com/services/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",
+              "configuration_url": "https://applivery.slack.com/services/B0ZH24LKX",
+              "channel_id": "C0Z9TF41Z",
+              "channel": "#cd"
+            },
+            "team_id": "T0JS4U3NU",
+            "team_name": "Applivery.com",
+            "scope": "identify,incoming-webhook",
+            "access_token": "xoxp-18888955776-18888340402-31519990627-94604395ce",
+            "ok": true
+          },
+          "triggers": ["upload", "feedback", "bug"],
+          "type": "slack",
+          "_id": "570b580d67ff4e4563cd9a3b"
+        }
+      ],
+      "sdk": {
+        "android": {
+          "minVersion": "3",
+          "installed": { "version": "1.1.0", "date": "2017-11-10T08:14:33.567Z" },
+          "updateMsg":
+            "There is a new version available for download! Do you want to update to the latest version?",
+          "mustUpdateMsg": "Sorry, you must update the App to the latest version to continue.",
+          "ota": true,
+          "forceUpdate": false
+        },
+        "ios": {
+          "updateMsg":
+            "There is a new version available for download! Do you want to update to the latest version?",
+          "mustUpdateMsg": "Sorry, you must update the App to the latest version to continue.",
+          "ota": true,
+          "forceUpdate": false
+        }
+      },
+      "crashesCount": 0,
+      "feedbackCount": 25,
+      "sitesCount": 0,
+      "totalDownloads": 94,
+      "buildsCount": 17,
+      "invited": [],
+      "teams": [
+        {
+          "_id": "56e745110174c74a6b25367e",
+          "name": "Android Team",
+          "members": [
+            { "member": "54c512a1ec672ffc2dbf9d0e", "role": "admin" },
+            { "role": "admin", "member": "59e733066e6a80d77c58319a" },
+            { "role": "developer", "member": "591c03925bc2f4c22b78b524" }
+          ]
+        }
+      ],
+      "members": [
+        {
+          "role": "developer",
+          "member": {
+            "_id": "54c7cfd24dcfba9d40159388",
+            "fullname": "Alejandro Jiménez",
+            "name": "Alesete"
+          }
+        },
+        {
+          "role": "client",
+          "member": {
+            "_id": "54c50a608464359f2c5fa35b",
+            "fullname": "Applivery S.L.",
+            "name": "Applivery"
+          }
+        }
+      ],
+      "active": true,
+      "modified": "2016-03-14T23:10:36.863Z",
+      "created": "2016-03-14T23:10:36.863Z",
+      "so": ["ios", "android"],
+      "description": ""
+    }
+  ]
+}

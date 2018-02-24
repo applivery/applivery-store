@@ -1,0 +1,39 @@
+{
+  "status": true,
+  "response": {
+    "_id": "5a86a098c09f0aff430cb5e8",
+    "notes": "Estas son la version notes<br />- cosa 1<br />- cosa 2<br />- cosa 3",
+    "versionName": "Rc-1",
+    "version": "1.0.0",
+    "info": {
+      "versionCode": 559,
+      "versionName": "1.0.0",
+      "platformBuildVersionCode": "24",
+      "platformBuildVersionName": "7.0",
+      "packageName": "com.cocacola.woah.markets",
+      "minSDKVersion": "18",
+      "targetSDKVersion": "23",
+      "icon": "ic_launcher.png"
+    },
+    "app": "58d2b6285063c91d29bedec4",
+    "size": 19655751,
+    "uploadedBy": {
+      "_id": "56e744c90174c74a6b25367b",
+      "fullname": "Applivery Dev",
+      "name": "AppliveryDev"
+    },
+    "so": "android",
+    "modifiedBy": "56e744c90174c74a6b25367b",
+    "downloadsCount": 1,
+    "modified": "2018-02-16T09:13:10.665Z",
+    "teams": [],
+    "notAuthMembers": [],
+    "tags": ["tag1", "tag2"],
+    "heritageMembers": true,
+    "created": "2018-02-16T09:13:10.666Z",
+    "inheritMembers": [],
+    "customMembers": [],
+    "landing": "http://...",
+    "binary": "http://..."
+  }
+}

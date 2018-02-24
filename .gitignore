@@ -1,0 +1,7 @@
+node_modules
+coverage
+npm-debug.log
+dist
+parameters.yml
+package-lock.json
+cypress/videos

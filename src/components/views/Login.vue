@@ -1,0 +1,98 @@
+<template>
+  <v-container>
+    <v-layout>
+      <v-flex xs12 sm6 offset-sm3>
+        <v-card>
+          <form @submit.prevent="submit" class="login-form">
+            <v-card-text>
+
+              <v-text-field
+                autofocus
+                ref="email"
+                label="Email"
+                type="email"
+                prepend-icon="email"
+                v-model.trim="email"
+                :disabled="loading"
+              />
+              <v-text-field
+                label="Password"
+                type="password"
+                prepend-icon="lock"
+                v-model.trim="password"
+                :disabled="loading"
+              />
+            </v-card-text>
+        
+            <v-card-actions>
+              <v-btn 
+                block
+                color="primary"
+                type="submit"
+                :loading="loading"
+              >
+                LOG IN
+              </v-btn>
+
+            </v-card-actions>
+            <p v-if="error" class="red--text caption text-xs-center">
+              {{ error && error.message }}
+            </p>
+          </form>
+        </v-card>
+      </v-flex>
+    </v-layout>
+  </v-container>
+</template>
+
+<script>
+import { mapActions } from 'vuex'
+
+export default {
+  data: () => ({
+    email: '',
+    password: '',
+    error: null,
+    loading: false,
+  }),
+  computed: {
+    fullfilled() {
+      return !!this.email.length && !!this.password.length
+    },
+  },
+  created() {
+    // Fix pasword autofill with email autofocus
+    const unwatch = this.$watch('password', val => {
+      this.$refs.email && this.$refs.email.focus()
+      unwatch()
+    })
+    setTimeout(unwatch, 1500)
+  },
+  methods: {
+    ...mapActions('auth', ['login']),
+    async submit() {
+      if (!this.fullfilled) return
+
+      this.loading = true
+      this.error = null
+      try {
+        await this.login({
+          email: this.email,
+          password: this.password,
+        })
+      } catch (err) {
+        this.error = err
+      }
+      this.loading = false
+    },
+  },
+}
+</script>
+
+<style lang="scss">
+.login-form {
+  input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px white inset;
+  }
+}
+</style>

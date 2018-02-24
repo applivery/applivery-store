@@ -1,0 +1,96 @@
+{
+  "status": true,
+  "response": [
+    {
+      "_id": "5a86a098c09f0aff430cb5e8",
+      "notes": "Estas son la version notes<br />- cosa 1<br />- cosa 2<br />- cosa 3",
+      "versionName": "Rc-1",
+      "version": "1.0.0",
+      "info": {
+        "versionCode": 559,
+        "versionName": "1.0.0",
+        "platformBuildVersionCode": "24",
+        "platformBuildVersionName": "7.0",
+        "packageName": "com.cocacola.woah.markets",
+        "minSDKVersion": "18",
+        "targetSDKVersion": "23",
+        "icon": "ic_launcher.png"
+      },
+      "app": "58d2b6285063c91d29bedec4",
+      "size": 19655751,
+      "uploadedBy": {
+        "_id": "56e744c90174c74a6b25367b",
+        "fullname": "Applivery Dev",
+        "name": "AppliveryDev"
+      },
+      "so": "android",
+      "modifiedBy": "56e744c90174c74a6b25367b",
+      "downloadsCount": 1,
+      "modified": "2018-02-16T09:13:10.665Z",
+      "teams": [],
+      "notAuthMembers": [],
+      "authMembers": [],
+      "tags": ["tag1", "tag2"],
+      "heritageMembers": true,
+      "created": "2018-02-16T09:13:10.666Z"
+    },
+    {
+      "_id": "5a1534dae2126455680cb244",
+      "notes": "",
+      "versionName": "2.0",
+      "version": "2.0",
+      "info": {
+        "versionCode": 2,
+        "versionName": "2.0",
+        "platformBuildVersionCode": "25",
+        "platformBuildVersionName": "7.1.1",
+        "packageName": "com.applivery.sample",
+        "minSDKVersion": "16",
+        "targetSDKVersion": "25",
+        "icon": "ic_launcher.png"
+      },
+      "app": "58d2b6285063c91d29bedec4",
+      "size": 2398031,
+      "uploadedBy": { "_id": "59e733066e6a80d77c58319a", "fullname": "Manuel RB" },
+      "so": "android",
+      "modifiedBy": "59e733066e6a80d77c58319a",
+      "downloadsCount": 0,
+      "modified": "2017-11-22T08:27:20.636Z",
+      "teams": [],
+      "notAuthMembers": [],
+      "authMembers": [],
+      "tags": [],
+      "heritageMembers": true,
+      "created": "2017-11-22T08:27:20.636Z"
+    },
+    {
+      "_id": "5a15349b48864afa33ef9532",
+      "notes": "",
+      "versionName": "1.0",
+      "version": "1.0",
+      "info": {
+        "versionCode": 1,
+        "versionName": "1.0",
+        "platformBuildVersionCode": "25",
+        "platformBuildVersionName": "7.1.1",
+        "packageName": "com.applivery.sample",
+        "minSDKVersion": "16",
+        "targetSDKVersion": "25",
+        "icon": "ic_launcher.png"
+      },
+      "app": "58d2b6285063c91d29bedec4",
+      "size": 2397999,
+      "uploadedBy": { "_id": "59e733066e6a80d77c58319a", "fullname": "Manuel RB" },
+      "so": "android",
+      "modifiedBy": "59e733066e6a80d77c58319a",
+      "downloadsCount": 3,
+      "modified": "2017-11-22T08:26:16.912Z",
+      "teams": [],
+      "notAuthMembers": [],
+      "authMembers": [],
+      "tags": [],
+      "heritageMembers": true,
+      "created": "2017-11-22T08:26:16.912Z"
+    }
+  ]
+}

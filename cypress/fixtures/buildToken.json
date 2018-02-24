@@ -1,0 +1,9 @@
+{
+  "status": true,
+  "response": {
+    "token": "xxxx",
+    "build": "5a86a098c09f0aff430cb5e8",
+    "member": "56e744c90174c74a6b25367b",
+    "exp": 1519162737349
+  }
+}

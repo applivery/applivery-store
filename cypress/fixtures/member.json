@@ -1,0 +1,77 @@
+{
+  "status": true,
+  "response": {
+    "_id": "56e744c90174c74a6b25367b",
+    "fullname": "Applivery Dev",
+    "firstname": "Applivery",
+    "lastname": "Dev",
+    "company": "Applivery",
+    "job": "IT Executive (CIO, CTO, VP Engineering, etc.)",
+    "country": "Spain",
+    "name": "AppliveryDev",
+    "email": "dev@applivery.com",
+    "password": "f4f3873aeb135682db6ed3b9d5de7d1bc53255b3",
+    "accountType": "enterpriseplus",
+    "confirmationCode": "c42b5a9af2cc8ba9c141b42734edefee965531af",
+    "invitationCode": "",
+    "lastLogin": "2018-02-20T20:36:51.895Z",
+    "lastAction": "2018-02-20T20:38:27.925Z",
+    "expirationDate": "2016-03-14T23:10:20.033Z",
+    "accessToken": "6bb301526496f4d5a233a183b0d7579f7a3c7a1b",
+    "permissions": { "sdk": true },
+    "lastRead": "2016-10-19T22:25:42.580Z",
+    "sdkAccessToken": "308fbf4c3fa46dc1ae900c252753974dee0169d0",
+    "vat": null,
+    "cif": null,
+    "city": "Madrid",
+    "cp": "28036",
+    "address": "Paseo de la Habana 9-11",
+    "tax": 21,
+    "customSubscription": false,
+    "superadmin": false,
+    "organizations": [],
+    "timeZone": -60,
+    "invitations": 4,
+    "enterprise": {
+      "companyName": "Applivery",
+      "companyWebsite": "http://www.applivery.com",
+      "domains": ["apps.applivery.com"],
+      "invited": [{ "role": "developer", "email": "cesar@applivery.com" }],
+      "members": [
+        {
+          "role": "developer",
+          "member": {
+            "_id": "54c7cfd24dcfba9d40159388",
+            "fullname": "Alejandro Jiménez",
+            "name": "Alesete",
+            "email": "a.j.agudo@gmail.com"
+          }
+        },
+        {
+          "role": "developer",
+          "member": {
+            "_id": "561cab7f866d9cab3c192717",
+            "fullname": "Sergio Martínez",
+            "name": "sergio_martinez",
+            "email": "ser.mar.rod.smr@gmail.com"
+          }
+        },
+        {
+          "role": "admin",
+          "member": {
+            "_id": "54c512a1ec672ffc2dbf9d0e",
+            "fullname": "Cesar Trigo",
+            "name": "CesarTrigo",
+            "email": "cesartrigo@gmail.com"
+          }
+        }
+      ],
+      "customLogo": false
+    },
+    "limits": { "downloads": 4000, "teams": 50, "sites": 100, "builds": 100, "apps": 50 },
+    "active": true,
+    "modified": "2017-11-22T00:37:09.692Z",
+    "created": "2016-03-14T23:10:01.998Z",
+    "social": []
+  }
+}
