@@ -2,7 +2,9 @@
   "baseUrl": "http://localhost:5000",
   "viewportWidth": 375,
   "viewportHeight": 667,
-  "blacklistHosts": ["*googletagmanager*"],
+  "blacklistHosts": [
+    "*googletagmanager*"
+  ],
   "chromeWebSecurity": false,
-  "projectId": "66z4vw"
+  "projectId": "re9fv1"
 }
