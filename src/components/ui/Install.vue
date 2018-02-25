@@ -14,8 +14,8 @@ import { mapState, mapActions } from 'vuex'
 
 export default {
   props: {
-    app: { type: Object, required: true },
-    build: { type: Object, required: true },
+    app: { type: Object, default: null },
+    build: { type: Object, default: null },
     small: { type: Boolean, default: false },
   },
   data: () => ({
