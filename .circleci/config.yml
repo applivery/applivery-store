@@ -36,5 +36,5 @@ jobs:
               git push --tags
               yarn deploy:ci
             else
-              echo "Not on master"'
+              echo "Not on master"
             fi
