@@ -13,7 +13,11 @@
 import { mapState, mapActions } from 'vuex'
 
 export default {
-  props: ['app', 'build', 'small'],
+  props: {
+    app: { type: Object, required: true },
+    build: { type: Object, required: true },
+    small: { type: Boolean, default: false },
+  },
   data: () => ({
     loading: false,
   }),

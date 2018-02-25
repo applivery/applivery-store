@@ -37,7 +37,9 @@ import prettyBytes from '@/lib/pretty-bytes'
 
 export default {
   components: { Loading },
-  props: ['app'],
+  props: {
+    app: { type: Object, required: true },
+  },
   data: () => ({
     build: null,
     error: null,

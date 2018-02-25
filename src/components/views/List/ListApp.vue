@@ -24,7 +24,9 @@
 </template>
 <script>
 export default {
-  props: ['app'],
+  props: {
+    app: { type: Object, required: true },
+  },
   computed: {
     image() {
       return `https://dashboard.applivery.com/img/apps/${this.app._id}.png`

@@ -33,7 +33,9 @@ import Install from '@/components/ui/Install'
 
 export default {
   components: { Loading, Install },
-  props: ['app'],
+  props: {
+    app: { type: Object, required: true },
+  },
   data: () => ({
     builds: null,
     error: null,

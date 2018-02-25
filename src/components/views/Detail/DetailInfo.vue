@@ -23,7 +23,9 @@ import Install from '@/components/ui/Install'
 
 export default {
   components: { Install },
-  props: ['app'],
+  props: {
+    app: { type: Object, required: true },
+  },
   computed: {
     image() {
       return `https://dashboard.applivery.com/img/apps/${this.app._id}.png`

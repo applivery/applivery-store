@@ -32,7 +32,9 @@
 
 <script>
 export default {
-  props: ['error'],
+  props: {
+    error: { type: null, required: true },
+  },
 }
 </script>
 
