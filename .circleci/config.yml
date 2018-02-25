@@ -32,7 +32,7 @@ jobs:
           name: Deploy on master
           command: |
             if [ $CIRCLE_BRANCH == "develop" ]; then
-              git tag $PKG_VERSION -a -m ""
+              git tag $PKG_VERSION
               git push --tags
               yarn deploy:ci
             else
