@@ -2,7 +2,7 @@
   <v-container grid-list-lg>
     <v-text-field 
       v-model="query"
-      label="Search app"
+      label="App name"
       prepend-icon="search"
       clearable
     />
