@@ -11,32 +11,30 @@ jobs:
           fingerprints:
             - "c3:20:a3:61:31:14:c2:79:b5:9b:f7:63:b4:c5:f3:93"
       - checkout
-      - run: node -pe 'require("./package.json").version'
-      - run: echo "export PKG_VERSION=v$(node -pe 'require("./package.json").version')" >> $BASH_ENV 
-      - run: echo $PKG_VERSION
-      - run: git tag $PKG_VERSION
-      - run: git tag -n1
-      - run: "git push --tags"
-      # - restore_cache:
-      #     keys:
-      #     - v2-dependencies-{{ checksum "yarn.lock" }}
-      # - run: 
-      #     name: Install apt dependencies
-      #     command: sudo apt-get update && sudo apt-get install -y xvfb libgtk2.0-0 libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2
-      # - run: yarn install
-      # - save_cache:
-      #     paths:
-      #       - node_modules
-      #       - ~/.npm
-      #     key: v2-dependencies-{{ checksum "yarn.lock" }}
-      # - run: yarn build
-      # - run: yarn test:ci 
-      # - run: 
-      #     name: Deploy on master
-      #     command: |
-      #       if [ $CIRCLE_BRANCH == "master" ]; then
-      #         export PKG_VERSION=v$(node -pe 'require("./package.json").version')
-      #         yarn deploy:ci
-      #       else
-      #         echo "Not on master"'
-      #       fi
+      - run: 
+          name: Set env
+          command: echo "export PKG_VERSION=v$(node -pe 'require("./package.json").version')" >> $BASH_ENV
+      - restore_cache:
+          keys:
+          - v2-dependencies-{{ checksum "yarn.lock" }}
+      - run: 
+          name: Install apt dependencies
+          command: sudo apt-get update && sudo apt-get install -y xvfb libgtk2.0-0 libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2
+      - run: yarn install
+      - save_cache:
+          paths:
+            - node_modules
+            - ~/.npm
+          key: v2-dependencies-{{ checksum "yarn.lock" }}
+      - run: yarn build
+      - run: yarn test:ci 
+      - run: 
+          name: Deploy on master
+          command: |
+            if [ $CIRCLE_BRANCH == "master" ]; then
+              git tag $PKG_VERSION -a -m ""
+              git push --tags
+              yarn deploy:ci
+            else
+              echo "Not on master"'
+            fi

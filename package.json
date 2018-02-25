@@ -1,6 +1,6 @@
 {
   "name": "applivery-store",
-  "version": "1.0.7-2",
+  "version": "1.0.7-3",
   "description": "Applivery Store",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
     "pretty": "prettier --write **/*.{js,json,scss,vue}",
     "build-deploy": "npm-run-all build deploy",
     "deploy": "firebase deploy --only hosting",
-    "deploy:ci": "PKG_VERSION=$(node -pe 'require(\"./package.json\").version') && firebase deploy --only hosting --token ${FIREBASE_TOKEN} -m ${PKG_VERSION}",
+    "deploy:ci": "firebase deploy --only hosting --token ${FIREBASE_TOKEN} -m ${PKG_VERSION}",
     "e2e": "cypress open",
     "e2e:run": "cypress run",
     "e2e:ci": "cypress run --record --key ${CYPRESS_KEY}",
