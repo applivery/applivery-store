@@ -11,7 +11,11 @@
       </v-container>
       <v-container fluid grid-list-lg>
         <v-layout row wrap>
-          <v-flex xs6 v-for="(value,name) in stats" :key="name"> 
+          <v-flex 
+            v-for="(value,name) in stats" 
+            :key="name"
+            xs6 
+          > 
             <b>{{ name }}</b>
             <div>{{ value }}</div>
           </v-flex>

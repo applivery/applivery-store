@@ -8,7 +8,7 @@ export default function(store, router) {
   async function ignitionStart(to, from, next) {
     debug('starting')
     try {
-      if (store.state.main.so == 'other') {
+      if (store.state.main.so === 'other') {
         const err = new Error('Please enter this site with your iOS or Android device')
         err.code = -3
         throw err

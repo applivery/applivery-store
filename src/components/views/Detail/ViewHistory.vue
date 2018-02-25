@@ -1,9 +1,17 @@
 <template>
   <v-container grid-list-lg>
     <transition appear mode="out-in">
-      <v-layout wrap v-if="builds">
-        <v-flex xs12 v-for="(build,index) in builds" :key="build._id" >
-          <Install class="install-button" :build="build" :small="true"/>
+      <v-layout v-if="builds" wrap>
+        <v-flex 
+          v-for="(build,index) in builds" 
+          :key="build._id" 
+          xs12 
+        >
+          <Install 
+            :build="build" 
+            :small="true"
+            class="install-button" 
+          />
           <div class="title">{{ build.versionName }} <span class="body-1">({{ build.version }})</span></div>
           <p class="caption">{{ build.created|date }}</p>
           <p v-html="build.notes"/>
@@ -36,7 +44,7 @@ export default {
   async created() {
     try {
       const allBuilds = await this.getBuilds(this.app._id)
-      this.builds = allBuilds.filter(build => build.so == this.so)
+      this.builds = allBuilds.filter(build => build.so === this.so)
     } catch (err) {
       this.error = err
     }

@@ -1,23 +1,23 @@
 <template>
   <v-toolbar 
-    app
-    fixed
-    dark
     :style="{backgroundColor:enterprise.color}"
     :color="enterprise.color ? '' : 'primary'"
+    fixed
+    app
+    dark
   >
     <template v-if="isLogged">
       <v-btn 
-        icon 
-        class="back-button"
         :to="{name:'list'}"
         :disabled="!canGoBack"
+        icon 
+        class="back-button"
       >
         <v-icon>arrow_back</v-icon>
       </v-btn>
       <v-toolbar-title>
         <template v-if="enterprise.logo">
-          <img class="logo" :src="enterprise.logo">
+          <img :src="enterprise.logo" class="logo">
         </template>
         <template v-else>
           My apps

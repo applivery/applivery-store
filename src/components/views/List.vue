@@ -1,14 +1,21 @@
 <template>
   <v-container grid-list-lg>
     <v-text-field 
-      label="Search app"
       v-model="query"
+      label="Search app"
       prepend-icon="search"
       clearable
     />
     <transition appear mode="out-in">
-      <transition-group name="list" v-if="apps" tag="div" class="layout row wrap">
-        <v-flex v-for="app in filteredApps" :key="app._id" xs12>
+      <transition-group 
+        v-if="apps" 
+        name="list" 
+        tag="div" 
+        class="layout row wrap">
+        <v-flex 
+          v-for="app in filteredApps" 
+          :key="app._id" 
+          xs12>
           <ListApp 
             :app="app"
           /> 

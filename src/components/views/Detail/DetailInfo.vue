@@ -11,7 +11,7 @@
       <v-flex>
         <div class="subheading">{{ app.name }}</div>
         <div class="grey--text">{{ app.owner.fullname }}</div>
-        <Install class="install-button" :app="app"/>
+        <Install :app="app" class="install-button"/>
       </v-flex>
     </v-layout>
     <div v-html="app.description"/>

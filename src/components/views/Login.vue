@@ -1,35 +1,38 @@
 <template>
   <v-container>
     <v-layout>
-      <v-flex xs12 sm6 offset-sm3>
+      <v-flex 
+        xs12 
+        sm6 
+        offset-sm3>
         <v-card>
-          <form @submit.prevent="submit" class="login-form">
+          <form class="login-form" @submit.prevent="submit">
             <v-card-text>
 
               <v-text-field
-                autofocus
                 ref="email"
-                label="Email"
-                type="email"
-                prepend-icon="email"
                 v-model.trim="email"
                 :disabled="loading"
+                autofocus
+                prepend-icon="email"
+                label="Email"
+                type="email"
               />
               <v-text-field
+                v-model.trim="password"
+                :disabled="loading"
                 label="Password"
                 type="password"
                 prepend-icon="lock"
-                v-model.trim="password"
-                :disabled="loading"
               />
             </v-card-text>
         
             <v-card-actions>
               <v-btn 
+                :loading="loading"
                 block
                 color="primary"
                 type="submit"
-                :loading="loading"
               >
                 LOG IN
               </v-btn>

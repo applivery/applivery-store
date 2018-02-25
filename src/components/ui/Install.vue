@@ -1,5 +1,10 @@
 <template>
-  <v-btn color="success" :small="small" @click="start" :loading="loading">
+  <v-btn 
+    :loading="loading"
+    :small="small" 
+    color="success" 
+    @click="start" 
+  >
     INSTALL
   </v-btn>
 </template>

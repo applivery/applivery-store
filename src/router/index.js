@@ -41,8 +41,8 @@ const router = new VueRouter({
   ],
   async scrollBehavior(to, from, savedPosition) {
     await new Promise(resolve => setTimeout(resolve, 400))
-    if (from.name == 'detail' && to.name == 'history') return
-    if (from.name == 'history' && to.name == 'detail') return
+    if (from.name === 'detail' && to.name === 'history') return
+    if (from.name === 'history' && to.name === 'detail') return
     if (savedPosition) {
       return savedPosition
     } else {

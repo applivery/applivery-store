@@ -1,8 +1,8 @@
 <template>
   <v-navigation-drawer
-    fixed
-    v-model="visible"
     v-if="member"
+    v-model="visible"
+    fixed
     right
     app
   >

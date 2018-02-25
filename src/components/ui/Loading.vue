@@ -2,7 +2,12 @@
   <section class="loading">
     <template v-if="error">
       <v-container>
-        <v-alert outline color="error" icon="warning" :value="true">
+        <v-alert 
+          :value="true"
+          outline 
+          color="error" 
+          icon="warning" 
+        >
           There was a problem
           <div class="caption grey--text">
             <template v-if="error.data">

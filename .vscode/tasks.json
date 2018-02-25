@@ -23,6 +23,12 @@
       "type": "npm",
       "script": "test",
       "group": "test"
+    },
+    {
+      "label": "Open cypress",
+      "type": "npm",
+      "script": "e2e",
+      "group": "test"
     }
   ]
 }
