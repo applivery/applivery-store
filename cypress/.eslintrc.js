@@ -1,4 +1,5 @@
 module.exports = {
+  extends: ['plugin:jest/recommended'],
   plugins: ['cypress'],
   env: {
     'cypress/globals': true,

@@ -1,6 +1,7 @@
 import * as api from '@/lib/api'
 import { clear as clearCache } from '@/lib/cache'
 import get from 'lodash/get'
+import { getURLParam } from '@/lib/utils'
 
 const state = {
   token: undefined,
@@ -9,7 +10,7 @@ const state = {
 
 const actions = {
   async init({ commit }) {
-    const token = window.localStorage.getItem('token')
+    const token = getURLParam('authToken') || window.localStorage.getItem('token')
     if (!token) return commit('CLEAR')
 
     try {

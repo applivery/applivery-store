@@ -12,3 +12,7 @@ export function getSO() {
   // return 'android'
   return 'other'
 }
+
+export function getURLParam(name) {
+  return new URLSearchParams(window.location.search).get(name)
+}

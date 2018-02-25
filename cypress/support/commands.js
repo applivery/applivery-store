@@ -33,12 +33,13 @@ const UA = {
     'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Mobile Safari/537.36',
 }
 
-Cypress.Commands.add('visitUA', function visitUA(url, ua) {
+Cypress.Commands.add('visitUA', function visitUA(url, ua, beforeLoad) {
   cy.visit(url, {
     onBeforeLoad(contentWindow) {
       contentWindow.navigator.__defineGetter__('userAgent', function() {
         return UA[ua]
       })
+      beforeLoad && beforeLoad(contentWindow)
     },
   })
 })
