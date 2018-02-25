@@ -11,7 +11,7 @@ jobs:
           fingerprints:
             - "c3:20:a3:61:31:14:c2:79:b5:9b:f7:63:b4:c5:f3:93"
       - checkout
-      - run: node -pe 'require("./package.json").version
+      - run: node -pe 'require("./package.json").version'
       - run: export PKG_VERSION=v$(node -pe 'require("./package.json").version')
       - run: echo $PKG_VERSION
       - run: git tag $PKG_VERSION
