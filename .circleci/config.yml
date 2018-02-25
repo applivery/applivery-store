@@ -13,7 +13,7 @@ jobs:
       - checkout
       - run: export PKG_VERSION=v$(node -pe 'require("./package.json").version')
       - run: git tag $PKG_VERSION
-      - run: git push origin $PKG_VERSION
+      - run: git push --tags
       # - restore_cache:
       #     keys:
       #     - v2-dependencies-{{ checksum "yarn.lock" }}
