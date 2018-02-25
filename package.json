@@ -1,6 +1,6 @@
 {
   "name": "applivery-store",
-  "version": "1.0.7-3",
+  "version": "1.0.8",
   "description": "Applivery Store",
   "main": "index.js",
   "scripts": {
