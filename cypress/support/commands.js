@@ -39,6 +39,9 @@ Cypress.Commands.add('visitUA', function visitUA(url, ua, beforeLoad) {
       contentWindow.navigator.__defineGetter__('userAgent', function() {
         return UA[ua]
       })
+      contentWindow.navigator.__defineGetter__('languages', function() {
+        return ['en']
+      })
       beforeLoad && beforeLoad(contentWindow)
     },
   })

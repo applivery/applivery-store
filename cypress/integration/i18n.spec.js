@@ -1,7 +1,6 @@
 function visitLang(url, langs, fn) {
   cy.visitUA(url, 'ANDROID', window => {
     window.localStorage.setItem('token', 'yyyy')
-    delete window.navigator.languages
     window.navigator.__defineGetter__('languages', function() {
       return langs
     })
