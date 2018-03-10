@@ -1,36 +1,38 @@
 <template>
-  <div>
-    <transition appear mode="out-in">
-      <v-layout v-if="app">
-        <v-flex xs12>
-          <v-card>
-            <DetailInfo :app="app"/>
-            <v-tabs
-              v-model="active"
-              fixed-tabs
-              height="40px"
-            >
-              <v-tab ripple href="#detail">
-                {{ $t('Detail.tab.detail') }}
-              </v-tab>
-              <v-tab ripple href="#history">
-                {{ $t('Detail.tab.history') }}
-              </v-tab>
-            </v-tabs>
-            <v-tabs-items v-model="active">
-              <v-tab-item id="detail" lazy>
-                <ViewDetail :app="app"/>
-              </v-tab-item>
-              <v-tab-item id="history" lazy>
-                <ViewHistory :app="app"/>
-              </v-tab-item>
-            </v-tabs-items>
-          </v-card>
-        </v-flex>
-      </v-layout>
-      <Loading v-else :error="error"/>
-    </transition>
-  </div>
+  <v-layout>
+    <v-flex xs12>
+      <v-card>
+        <template v-if="app">
+          <DetailInfo :app="app"/>
+          <v-tabs
+            v-model="active"
+            fixed-tabs
+            height="40px"
+          >
+            <v-tab ripple href="#detail">
+              {{ $t('Detail.tab.detail') }}
+            </v-tab>
+            <v-tab ripple href="#history">
+              {{ $t('Detail.tab.history') }}
+            </v-tab>
+          </v-tabs>
+          <v-tabs-items v-model="active">
+            <v-tab-item id="detail" lazy>
+              <ViewDetail :app="app"/>
+            </v-tab-item>
+            <v-tab-item id="history" lazy>
+              <ViewHistory :app="app"/>
+            </v-tab-item>
+          </v-tabs-items>
+        </template>
+        <Loading 
+          v-else 
+          :error="error" 
+          placeholders="detail"
+        />
+      </v-card>
+    </v-flex>
+  </v-layout>
 </template>
 
 <script>

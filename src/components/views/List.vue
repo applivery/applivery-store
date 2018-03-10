@@ -1,28 +1,30 @@
 <template>
-  <v-container grid-list-lg>
+  <v-container grid-list-lg class="section-list">
     <v-text-field 
       v-model="query"
       :label="$t('List.search')"
       prepend-icon="search"
       clearable
     />
-    <transition appear mode="out-in">
-      <transition-group 
-        v-if="apps" 
-        name="list" 
-        tag="div" 
-        class="layout row wrap">
-        <v-flex 
-          v-for="app in filteredApps" 
-          :key="app._id" 
-          xs12>
-          <ListApp 
-            :app="app"
-          /> 
-        </v-flex>
-      </transition-group>
-      <Loading v-else :error="error"/>
-    </transition>
+    <transition-group 
+      v-if="apps" 
+      name="list" 
+      tag="div" 
+      class="layout row wrap">
+      <v-flex 
+        v-for="app in filteredApps" 
+        :key="app._id" 
+        xs12>
+        <ListApp 
+          :app="app"
+        /> 
+      </v-flex>
+    </transition-group>
+    <Loading 
+      v-else 
+      :error="error" 
+      placeholders="list"
+    />
   </v-container>
 
 
@@ -70,3 +72,11 @@ export default {
   },
 }
 </script>
+
+<style lang="scss">
+.section-list {
+  .loading .box {
+    background-color: #fafafa;
+  }
+}
+</style>

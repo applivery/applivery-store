@@ -1,6 +1,7 @@
 <template>
   <section class="loading">
-    <template v-if="error">
+    <content-placeholder v-if="!error" :rows="rows"/>
+    <template v-else>
       <v-container>
         <v-alert 
           :value="true"
@@ -21,19 +22,23 @@
         </v-alert>
       </v-container>
     </template>
-    <transition appear>
-      <div v-if="!error" class="loading-spinner">
-        <div class="double-bounce1"/>
-        <div class="double-bounce2"/>
-      </div>
-    </transition>
   </section>
 </template>
 
 <script>
+import ContentPlaceholder from 'vue-content-placeholder'
+import * as contentPlaceholders from '@/lib/contentPlaceholders'
+
 export default {
+  components: { ContentPlaceholder },
   props: {
-    error: { type: null, required: true },
+    error: { type: null, default: null },
+    placeholders: { type: String, default: '' },
+  },
+  computed: {
+    rows() {
+      return contentPlaceholders[this.placeholders] ? contentPlaceholders[this.placeholders]() : []
+    },
   },
 }
 </script>

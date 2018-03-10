@@ -1,31 +1,32 @@
 <template>
-  <transition appear mode="out-in">
-    <div v-if="build">
-      <v-container v-if="build.notes">
+  <div v-if="build">
+    <v-container v-if="build.notes">
       
-        <p><b>{{ $t('Detail.info.new') }}</b></p>
-        <div
-          class="detail-content" 
-          v-html="build.notes"
-        />
-      </v-container>
-      <v-container fluid grid-list-lg>
-        <v-layout row wrap>
-          <v-flex 
-            v-for="(value,name) in stats" 
-            :key="name"
-            xs6 
-          > 
-            <b>{{ $t(`Detail.info.${name}`) }}</b>
-            <div>{{ value }}</div>
-          </v-flex>
-        </v-layout>
-      </v-container>
-    </div>
-    <Loading v-else :error="error"/>
-  </transition>
-
-
+      <p><b>{{ $t('Detail.info.new') }}</b></p>
+      <div
+        class="detail-content" 
+        v-html="build.notes"
+      />
+    </v-container>
+    <v-container fluid grid-list-lg>
+      <v-layout row wrap>
+        <v-flex 
+          v-for="(value,name) in stats" 
+          :key="name"
+          xs6 
+        > 
+          <b>{{ $t(`Detail.info.${name}`) }}</b>
+          <div>{{ value }}</div>
+        </v-flex>
+      </v-layout>
+    </v-container>
+  </div>
+  <v-container v-else>
+    <Loading 
+      :error="error"
+      placeholders="viewDetail" 
+    />
+  </v-container>
 </template>
 
 <script>
