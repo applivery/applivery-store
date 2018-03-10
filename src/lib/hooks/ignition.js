@@ -1,7 +1,7 @@
 import Debug from 'debug'
 const debug = Debug('app:ignition')
 
-export default function (store, router) {
+export default function(store, router) {
   const unregisterStart = router.beforeEach(ignitionStart)
   const unregisterEnd = router.afterEach(ignitionEnd)
 

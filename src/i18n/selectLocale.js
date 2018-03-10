@@ -1,4 +1,4 @@
-import {getURLParam} from '@/lib/utils'
+import { getURLParam } from '@/lib/utils'
 
 /**
  * Return browser languages
@@ -15,7 +15,6 @@ function getBrowserLanguages() {
   // latest versions of Chrome, Firefox, and Safari set this correctly
   return [navigator.language]
 }
-
 
 /**
  * Concat user and browser languages

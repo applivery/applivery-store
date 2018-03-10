@@ -1,4 +1,4 @@
-function visitLang(url,langs,fn){
+function visitLang(url, langs, fn) {
   cy.visitUA(url, 'ANDROID', window => {
     window.localStorage.setItem('token', 'yyyy')
     delete window.navigator.languages
@@ -18,43 +18,49 @@ describe('i18n', () => {
   })
 
   it('should use lang from browser', () => {
-    visitLang('/',['es'])
+    visitLang('/', ['es'])
 
     cy.contains('Mis apps')
   })
 
   it('should use default lang if not found', () => {
-    visitLang('/',['invalid'])
+    visitLang('/', ['invalid'])
 
     cy.contains('My apps')
   })
 
   it('should use lang from url instead of browser', () => {
-    visitLang('/?lang=es',['en'])
+    visitLang('/?lang=es', ['en'])
 
     cy.contains('Mis apps')
   })
 
   it('should save selected lang in localStorage', () => {
-    visitLang('/',['en'])
+    visitLang('/', ['en'])
 
     cy.contains('My apps')
     cy.get('.toolbar__side-icon').click()
-    cy.window().its('localStorage').should('not.have.property','locale')
+    cy
+      .window()
+      .its('localStorage')
+      .should('not.have.property', 'locale')
     cy.contains('Change language').click()
-    cy.window().its('localStorage').should('have.property','locale','es')
+    cy
+      .window()
+      .its('localStorage')
+      .should('have.property', 'locale', 'es')
   })
 
   it('should use lang from localStorage', () => {
-    visitLang('/',['en'],window=>{
-      window.localStorage.setItem('locale','es')
+    visitLang('/', ['en'], window => {
+      window.localStorage.setItem('locale', 'es')
     })
     cy.contains('Mis apps')
   })
 
   it('should use lang from url instead of localStorage', () => {
-    visitLang('/?lang=en',['en'],window=>{
-      window.localStorage.setItem('locale','es')
+    visitLang('/?lang=en', ['en'], window => {
+      window.localStorage.setItem('locale', 'es')
     })
     cy.contains('My apps')
   })

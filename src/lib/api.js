@@ -141,7 +141,7 @@ export async function getBuildLink(token, buildId, so) {
   if (so === 'ios') {
     return `itms-services://?action=download-manifest&url=${BASE_URL}/download/${
       data.build
-      }/manifest/${data.token}`
+    }/manifest/${data.token}`
   }
   if (so === 'android') {
     return `${BASE_URL}/download/${data.build}/manifest/${data.token}`

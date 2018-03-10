@@ -6,7 +6,7 @@ import Debug from 'debug'
 // Clear service workers
 navigator.serviceWorker &&
   navigator.serviceWorker.getRegistrations &&
-  navigator.serviceWorker.getRegistrations().then(function (registrations) {
+  navigator.serviceWorker.getRegistrations().then(function(registrations) {
     for (const registration of registrations) {
       registration.unregister()
     }
