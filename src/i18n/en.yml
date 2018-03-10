@@ -25,6 +25,7 @@ Loading:
 
 Sidebar:
   logout: Logout
+  changeLanguage: Change language
 
 Toolbar:
   genericTitle: My apps

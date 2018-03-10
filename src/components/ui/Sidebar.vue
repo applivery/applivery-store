@@ -28,6 +28,16 @@
           <v-list-tile-title>Open desktop version</v-list-tile-title>
         </v-list-tile-content>
       </v-list-tile> -->
+      <v-list-tile @click="changeLanguage">
+        <v-list-tile-action>
+          <v-icon>language</v-icon>
+        </v-list-tile-action>
+        <v-list-tile-content>
+          <v-list-tile-title >
+            {{ $t('Sidebar.changeLanguage') }} <b>{{ $i18n.locale.toUpperCase() }}</b>
+          </v-list-tile-title>
+        </v-list-tile-content>
+      </v-list-tile>
       <v-list-tile @click="logout">
         <v-list-tile-action>
           <v-icon>exit_to_app</v-icon>
@@ -71,6 +81,13 @@ export default {
     ...mapMutations({
       closeSidebar: 'main/CLOSE_SIDEBAR',
     }),
+    changeLanguage() {
+      const locales = Object.keys(this.$i18n.messages)
+      let idx = locales.indexOf(this.$i18n.locale) + 1
+      if (idx > locales.length - 1) idx = 0
+      this.$i18n.locale = locales[idx]
+      window.localStorage.setItem('locale', locales[idx])
+    },
   },
 }
 </script>

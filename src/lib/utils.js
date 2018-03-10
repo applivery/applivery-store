@@ -1,6 +1,6 @@
 export function getSO() {
   const ua = navigator.userAgent
-  const urlSO = new URLSearchParams(window.location.search).get('os')
+  const urlSO = getURLParam('os')
 
   if (urlSO && ['android', 'ios'].includes(urlSO)) {
     return urlSO
