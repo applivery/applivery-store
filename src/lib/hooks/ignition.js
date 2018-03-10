@@ -1,7 +1,7 @@
 import Debug from 'debug'
 const debug = Debug('app:ignition')
 
-export default function(store, router) {
+export default function (store, router) {
   const unregisterStart = router.beforeEach(ignitionStart)
   const unregisterEnd = router.afterEach(ignitionEnd)
 
@@ -9,7 +9,7 @@ export default function(store, router) {
     debug('starting')
     try {
       if (store.state.main.so === 'other') {
-        const err = new Error('Please enter this site with your iOS or Android device')
+        const err = new Error('INVALID_OS')
         err.code = -3
         throw err
       }

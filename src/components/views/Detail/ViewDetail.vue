@@ -3,7 +3,7 @@
     <div v-if="build">
       <v-container v-if="build.notes">
       
-        <p><b>What's new</b></p>
+        <p><b>{{ $t('Detail.info.new') }}</b></p>
         <div
           class="detail-content" 
           v-html="build.notes"
@@ -16,7 +16,7 @@
             :key="name"
             xs6 
           > 
-            <b>{{ name }}</b>
+            <b>{{ $t(`Detail.info.${name}`) }}</b>
             <div>{{ value }}</div>
           </v-flex>
         </v-layout>
@@ -48,17 +48,17 @@ export default {
     ...mapState('main', ['so']),
     stats() {
       return {
-        Developer: this.build.uploadedBy.fullname,
-        Updated: moment(this.build.created).format('DD MMMM YYYY'),
-        Version: this.build.version,
-        Size: prettyBytes(this.build.size),
+        developer: this.build.uploadedBy.fullname,
+        updated: moment(this.build.created).format('DD MMMM YYYY'),
+        version: this.build.version,
+        size: prettyBytes(this.build.size),
       }
     },
   },
   async created() {
     try {
       const lastBuildId = this.app.sdk[this.so].lastBuildId
-      if (!lastBuildId) throw new Error(`Build not present for ${this.so}`)
+      if (!lastBuildId) throw new Error('BUILD_NOT_FOR_SO')
       this.build = await this.getBuild(lastBuildId)
     } catch (err) {
       this.error = err

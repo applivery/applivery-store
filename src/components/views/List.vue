@@ -2,7 +2,7 @@
   <v-container grid-list-lg>
     <v-text-field 
       v-model="query"
-      label="App name"
+      :label="$t('List.search')"
       prepend-icon="search"
       clearable
     />

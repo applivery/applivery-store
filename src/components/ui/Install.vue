@@ -5,7 +5,7 @@
     color="success" 
     @click="start" 
   >
-    INSTALL
+    {{ $t('Install.button') }}
   </v-btn>
 </template>
 

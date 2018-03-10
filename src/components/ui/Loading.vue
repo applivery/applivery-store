@@ -8,14 +8,14 @@
           color="error" 
           icon="warning" 
         >
-          There was a problem
+          {{ $t('Loading.problem') }}
           <div class="caption grey--text">
             <template v-if="error.data">
               {{ error.data.code }}
               {{ error.data.msg }}
             </template>
             <template v-else>
-              {{ error.message }}
+              {{ $t(error.message) }}
             </template>
           </div>
         </v-alert>

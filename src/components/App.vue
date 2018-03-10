@@ -24,7 +24,7 @@
         <div class="spinner">
           <span v-if="ignition.error" class="ignition-error">
             <!-- {{ ignition.error.code }} -->
-            {{ ignition.error.message }}
+            {{ $t(ignition.error.message) }}
           </span>
           <template v-else>
             <div class="double-bounce1"/>

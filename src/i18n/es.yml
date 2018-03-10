@@ -1,0 +1,35 @@
+Login:
+  email: Email
+  password: Contraseña
+  submit: ENTRAR
+
+List:
+  search: Nombre de app
+
+Detail:
+  tab:
+    detail: Detalles
+    history: Historia
+  info:
+    new: Novedades
+    developer: Desarrollador
+    updated: Actualizado
+    version: Versión
+    size: Tamaño
+
+
+Install:
+  button: INSTALAR
+
+Loading:
+  problem: Hubo un problema
+
+Sidebar:
+  logout: Salir
+
+Toolbar:
+  genericTitle: Mis apps
+
+INVALID_OS: Por favor entra con tu dispositivo iOS o Android
+BUILD_NOT_FOR_SO: Build no existente para este SO
+UNKOWN_ERROR: Error desconocido

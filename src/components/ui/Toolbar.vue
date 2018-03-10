@@ -20,7 +20,7 @@
           <img :src="enterprise.logo" class="logo">
         </template>
         <template v-else>
-          My apps
+          {{ $t('Toolbar.genericTitle') }}
         </template>
       </v-toolbar-title>
       <v-spacer/>

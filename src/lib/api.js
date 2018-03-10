@@ -12,7 +12,7 @@ const API_URL = BASE_URL + '/api'
 export class ApiError extends Error {
   constructor(data) {
     if (!data || typeof data !== 'object') data = {}
-    if (!data.msg) data.msg = 'Unkown error'
+    if (!data.msg) data.msg = 'UNKOWN_ERROR'
     data.code |= 0
     if (!data.code) data.code = -1
 
@@ -130,7 +130,7 @@ export function getMember(token) {
 }
 export async function getBuildLink(token, buildId, so) {
   if (!~['android', 'ios'].indexOf(so)) {
-    return Promise.reject(new Error('Invalid SO parameter'))
+    return Promise.reject(new Error('INVALID_SO_PARAM'))
   }
 
   const data = await request({
@@ -141,7 +141,7 @@ export async function getBuildLink(token, buildId, so) {
   if (so === 'ios') {
     return `itms-services://?action=download-manifest&url=${BASE_URL}/download/${
       data.build
-    }/manifest/${data.token}`
+      }/manifest/${data.token}`
   }
   if (so === 'android') {
     return `${BASE_URL}/download/${data.build}/manifest/${data.token}`

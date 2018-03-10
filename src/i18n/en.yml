@@ -1,62 +1,34 @@
-
-rootLayout: 
-  projects: Projects
-  profile: Profile
-  logout: Logout
-  god: God
-  godSupplant: Supplant 
-  godSupplantStop: Stop supplanting 
-
-LoginView:
-  email: 
-    placeholder: Email address
-  password: 
-    placeholder: Password
-
-headTitle:
-  notFound: '404'
-  home: Home
-  login: Login
-  profile: Profile
-  godSupplant: Supplant
+Login:
+  email: Email
+  password: Password
+  submit: LOG IN
 
 List:
-  Pagination:
-    of: of
-    page: Page
-    showing: Showing
+  search: App name
 
-  Selection:
-    item: You have <b>1</b> item selected | You have <b>{count}</b> items selected
-    unselect: Unselect
+Detail:
+  tab:
+    detail: Details
+    history: History
+  info:
+    new: What's new
+    developer: Developer
+    updated: Updated
+    version: Version
+    size: Size
 
-  Filtering:
-    filter: Filter
-    clearFilter: Clear filters
+Install:
+  button: INSTALL
 
-model:
-  Project:
-    name:
-      label: Name
-      filterPlaceholder: Search project by name
-    updatedAt:
-      label: Updated at
-    createdAt:
-      label: Created at
-    role:
-      label: Role
-    active:
-      label: Active
+Loading:
+  problem: There was a problem
 
-validation:
-  required: Don't forget this
-  minLength: Minimum length is {min}
-  minValue: Minimum value is {min}
-  maxValue: Maximum value is {max}
+Sidebar:
+  logout: Logout
 
-units:
-  seconds: seconds
-  regions: regions
+Toolbar:
+  genericTitle: My apps
 
-actions:
-  save: Save
+INVALID_OS: Please enter this site with your iOS or Android device
+BUILD_NOT_FOR_SO: Build not present for this OS
+UNKOWN_ERROR: Unkown error

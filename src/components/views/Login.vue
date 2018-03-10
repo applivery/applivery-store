@@ -12,15 +12,15 @@
               ref="email"
               v-model.trim="email"
               :disabled="loading"
+              :label="$t('Login.email')"
               autofocus
               prepend-icon="email"
-              label="Email"
               type="email"
             />
             <v-text-field
               v-model.trim="password"
               :disabled="loading"
-              label="Password"
+              :label="$t('Login.password')"
               type="password"
               prepend-icon="lock"
             />
@@ -33,12 +33,12 @@
               color="primary"
               type="submit"
             >
-              LOG IN
+              {{ $t('Login.submit') }}
             </v-btn>
 
           </v-card-actions>
           <p v-if="error" class="red--text caption text-xs-center">
-            {{ error && error.message }}
+            {{ $t(error && error.message) }}
           </p>
         </form>
       </v-card>

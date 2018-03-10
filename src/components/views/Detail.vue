@@ -10,8 +10,12 @@
               fixed-tabs
               height="40px"
             >
-              <v-tab ripple href="#detail">Details </v-tab>
-              <v-tab ripple href="#history">History </v-tab>
+              <v-tab ripple href="#detail">
+                {{ $t('Detail.tab.detail') }}
+              </v-tab>
+              <v-tab ripple href="#history">
+                {{ $t('Detail.tab.history') }}
+              </v-tab>
             </v-tabs>
             <v-tabs-items v-model="active">
               <v-tab-item id="detail" lazy>
