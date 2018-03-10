@@ -1,6 +1,6 @@
-const debug = require('debug')('orx:sync-logged-view')
+const debug = require('debug')('app:sync-logged-view')
 
-export default function(store, router) {
+export default function (store, router) {
   let exitedFrom = null
   const login = { name: 'login' }
   const home = { name: 'list' }
@@ -42,7 +42,7 @@ export default function(store, router) {
     (curr, prev) => {
       if (prev !== undefined) {
         debug('member-state-changed')
-        requiredAuth(router.currentRoute, null, () => {})
+        requiredAuth(router.currentRoute, null, () => { })
       }
     }
   )

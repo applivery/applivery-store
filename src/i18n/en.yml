@@ -1,0 +1,62 @@
+
+rootLayout: 
+  projects: Projects
+  profile: Profile
+  logout: Logout
+  god: God
+  godSupplant: Supplant 
+  godSupplantStop: Stop supplanting 
+
+LoginView:
+  email: 
+    placeholder: Email address
+  password: 
+    placeholder: Password
+
+headTitle:
+  notFound: '404'
+  home: Home
+  login: Login
+  profile: Profile
+  godSupplant: Supplant
+
+List:
+  Pagination:
+    of: of
+    page: Page
+    showing: Showing
+
+  Selection:
+    item: You have <b>1</b> item selected | You have <b>{count}</b> items selected
+    unselect: Unselect
+
+  Filtering:
+    filter: Filter
+    clearFilter: Clear filters
+
+model:
+  Project:
+    name:
+      label: Name
+      filterPlaceholder: Search project by name
+    updatedAt:
+      label: Updated at
+    createdAt:
+      label: Created at
+    role:
+      label: Role
+    active:
+      label: Active
+
+validation:
+  required: Don't forget this
+  minLength: Minimum length is {min}
+  minValue: Minimum value is {min}
+  maxValue: Maximum value is {max}
+
+units:
+  seconds: seconds
+  regions: regions
+
+actions:
+  save: Save
