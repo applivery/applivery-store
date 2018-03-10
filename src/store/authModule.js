@@ -23,13 +23,11 @@ const actions = {
   async login({ commit }, { email, password }) {
     const token = await api.authenticate(email, password)
     const member = await api.getMember(token)
-    window.localStorage.setItem('token', token)
     commit('SET', { token, member })
   },
   logout({ commit }) {
     clearCache()
     commit('main/CLOSE_SIDEBAR', null, { root: true })
-    window.localStorage.removeItem('token')
     commit('CLEAR')
   },
 }
@@ -38,10 +36,12 @@ const mutations = {
   SET(state, { member, token }) {
     state.token = token
     state.member = member
+    window.localStorage.setItem('token', token)
   },
   CLEAR(state) {
     state.token = null
     state.member = null
+    window.localStorage.removeItem('token')
   },
 }
 

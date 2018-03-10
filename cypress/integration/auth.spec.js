@@ -81,4 +81,26 @@ describe('auth', () => {
 
     cy.contains('My apps')
   })
+
+  it('should save auth from url', () => {
+    cy.visitUA('/?authToken=bbbb', 'ANDROID', window => {
+      window.localStorage.setItem('token', 'cccc')
+    })
+
+    cy
+      .wait('@member')
+      .its('requestHeaders.authorization')
+      .should('eq', 'Bearer bbbb')
+
+    cy.contains('My apps')
+
+    cy.visitUA('/', 'ANDROID')
+
+    cy
+      .wait('@member')
+      .its('requestHeaders.authorization')
+      .should('eq', 'Bearer bbbb')
+
+    cy.contains('My apps')
+  })
 })
