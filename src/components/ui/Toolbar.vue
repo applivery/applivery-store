@@ -15,13 +15,15 @@
       >
         <v-icon>arrow_back</v-icon>
       </v-btn>
-      <v-toolbar-title>
-        <template v-if="enterprise.logo">
-          <img :src="enterprise.logo" class="logo">
-        </template>
-        <template v-else>
-          {{ $t('Toolbar.genericTitle') }}
-        </template>
+      <v-toolbar-title >
+        <router-link :to="{name:'list'}">
+          <template v-if="enterprise.logo">
+            <img :src="enterprise.logo" class="logo">
+          </template>
+          <template v-else>
+            {{ $t('Toolbar.genericTitle') }}
+          </template>
+        </router-link>
       </v-toolbar-title>
       <v-spacer/>
       <v-toolbar-side-icon @click="openSidebar"/>
