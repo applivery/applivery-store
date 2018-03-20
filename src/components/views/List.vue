@@ -31,7 +31,7 @@
 </template>
 
 <script>
-import { mapActions, mapState } from 'vuex'
+import { mapActions, mapState, mapGetters } from 'vuex'
 import ListApp from './List/ListApp'
 import Loading from '@/components/ui/Loading'
 import finder from '@/lib/finder'
@@ -46,12 +46,15 @@ export default {
   }),
   computed: {
     ...mapState('main', ['so']),
+    ...mapGetters('pin', ['pinList']),
     filteredApps() {
       if (this.query) {
         const result = finder.find(this.query)
         return result.map(id => find(this.apps, { _id: id }))
       } else {
         return this.apps
+          .slice(0)
+          .sort((a, b) => this.pinList.indexOf(a._id) < this.pinList.indexOf(b._id))
       }
     },
   },

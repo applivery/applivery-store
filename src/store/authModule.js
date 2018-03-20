@@ -47,6 +47,7 @@ const mutations = {
 
 const getters = {
   isLogged: state => !!(state.member && state.token),
+  memberId: state => state.member && state.member._id,
   enterprise(state) {
     const customLogo = get(state, 'member.organizations[0].member.enterprise.customLogo')
     const memberId = get(state, 'member.organizations[0].member._id')
