@@ -4,6 +4,7 @@ import Vuex from 'vuex'
 import main from './mainModule'
 import auth from './authModule'
 import fetch from './fetchModule'
+import enterprise from './enterpriseModule'
 import pin from './pinModule'
 import createPersistedState from 'vuex-persistedstate'
 
@@ -18,6 +19,7 @@ export default new Vuex.Store({
   ],
   modules: {
     main,
+    enterprise,
     auth,
     fetch,
     pin,

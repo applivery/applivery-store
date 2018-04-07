@@ -1,0 +1,23 @@
+{
+  "status": true,
+  "response": {
+    "_id": "54cb4e6df997a46c041b9983",
+    "fullname": "Gigigo Apps",
+    "name": "gigigoapps",
+    "accountType": "enterpriseplus",
+    "enterprise": {
+      "secondaryColor": "#212121",
+      "primaryColor": "#000000",
+      "companyWebsite": "http://www.gigigo.com",
+      "companyName": "Gigigo Group",
+      "domains": ["gigigoapps.com"],
+      "invited": [{ "role": "admin", "email": "jorge.fernadez@gigigo.com.mx" }],
+      "members": [
+        { "member": "5511fac683486a1960b66dcd", "role": "admin" },
+        { "member": "54fdae860e47fe0906586422", "role": "admin" },
+        { "member": "55003b18569d564372b5010b", "role": "developer" }
+      ],
+      "customLogo": true
+    }
+  }
+}

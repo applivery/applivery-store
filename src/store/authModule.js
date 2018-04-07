@@ -1,6 +1,5 @@
 import * as api from '@/lib/api'
 import { clear as clearCache } from '@/lib/cache'
-import get from 'lodash/get'
 import { getURLParam } from '@/lib/utils'
 
 const state = {
@@ -48,14 +47,6 @@ const mutations = {
 const getters = {
   isLogged: state => !!(state.member && state.token),
   memberId: state => state.member && state.member._id,
-  enterprise(state) {
-    const customLogo = get(state, 'member.organizations[0].member.enterprise.customLogo')
-    const memberId = get(state, 'member.organizations[0].member._id')
-    const color = get(state, 'member.organizations[0].member.enterprise.primaryColor')
-    const logo = customLogo ? `https://dashboard.applivery.com/img/enterprise/${memberId}.jpg` : ''
-
-    return { color, logo }
-  },
 }
 export default {
   namespaced: true,

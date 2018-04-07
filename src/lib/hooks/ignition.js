@@ -14,6 +14,7 @@ export default function(store, router) {
         throw err
       }
       await store.dispatch('auth/init')
+      await store.dispatch('enterprise/init')
       unregisterStart()
       debug('success')
       next()

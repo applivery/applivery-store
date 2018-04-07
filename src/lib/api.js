@@ -87,6 +87,10 @@ export function authenticate(email, password) {
   return request.post('/auth', { email, password }).then(res => res.accessToken)
 }
 
+export function getEnterprise(domain) {
+  return request.post('/enterprise', { domain })
+}
+
 export function getApps(token) {
   return cache(`${token}:getApps`, () =>
     request({
@@ -120,6 +124,7 @@ export function getBuild(token, buildId) {
     })
   )
 }
+
 export function getMember(token) {
   return cache(`${token}:getMember`, () =>
     request({
@@ -128,6 +133,7 @@ export function getMember(token) {
     })
   )
 }
+
 export async function getBuildLink(token, buildId, so) {
   if (!~['android', 'ios'].indexOf(so)) {
     return Promise.reject(new Error('INVALID_SO_PARAM'))

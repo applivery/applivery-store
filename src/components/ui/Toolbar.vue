@@ -1,7 +1,7 @@
 <template>
   <v-toolbar 
-    :style="{backgroundColor:enterprise.color}"
-    :color="enterprise.color ? '' : 'primary'"
+    :style="{backgroundColor:custom.color}"
+    :color="custom.color ? '' : 'primary'"
     fixed
     app
     dark
@@ -17,8 +17,8 @@
       </v-btn>
       <v-toolbar-title >
         <router-link :to="{name:'list'}">
-          <template v-if="enterprise.logo">
-            <img :src="enterprise.logo" class="logo">
+          <template v-if="custom.logo">
+            <img :src="custom.logo" class="logo">
           </template>
           <template v-else>
             {{ $t('Toolbar.genericTitle') }}
@@ -29,7 +29,14 @@
       <v-toolbar-side-icon @click="openSidebar"/>
     </template>
     <template v-else>
-      <v-toolbar-title>Applivery</v-toolbar-title>      
+      <v-toolbar-title>
+        <template v-if="custom.logo">
+          <img :src="custom.logo" class="logo">
+        </template>
+        <template v-else>
+          Applivery
+        </template>
+      </v-toolbar-title>      
     </template>
   </v-toolbar>
 </template>
@@ -38,7 +45,8 @@
 import { mapMutations, mapGetters } from 'vuex'
 export default {
   computed: {
-    ...mapGetters('auth', ['enterprise', 'isLogged']),
+    ...mapGetters('auth', ['isLogged']),
+    ...mapGetters('enterprise', ['custom']),
     canGoBack() {
       return this.$route.name !== 'list'
     },
