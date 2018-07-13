@@ -31,13 +31,14 @@
       <v-toolbar-side-icon @click="openSidebar"/>
     </template>
     <template v-else>
-      <v-toolbar-title>
-        <template v-if="custom.logo">
-          <img :src="custom.logo" class="logo">
-        </template>
-        <template v-else>
-          Applivery
-        </template>
+
+      <div 
+        v-if="custom.logo"
+        :style="{backgroundImage:`url(${custom.logo})`}"
+        class="toolbar-logo"
+      />
+      <v-toolbar-title v-else>
+        Applivery
       </v-toolbar-title>      
     </template>
   </v-toolbar>
@@ -67,6 +68,6 @@ export default {
   background-position: left center;
   background-repeat: no-repeat;
   background-size: contain;
-  margin-left: 16px;
+  margin: 0 16px;
 }
 </style>

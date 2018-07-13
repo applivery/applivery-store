@@ -21,11 +21,11 @@ describe('enterprise customization', () => {
       .should('have.property', 'domain', 'custom-enterprise.applivery.com')
     cy.get('.toolbar').should('have.css', 'background-color', 'rgb(125, 8, 8)')
     cy
-      .get('.logo')
+      .get('.toolbar-logo')
       .should(
-        'have.attr',
-        'src',
-        'https://dashboard.applivery.com/img/enterprise/54cb4e6df997a46c041b9983.jpg'
+        'have.css',
+        'background-image',
+        'url("https://dashboard.applivery.com/img/enterprise/54cb4e6df997a46c041b9983.jpg")'
       )
   })
 
