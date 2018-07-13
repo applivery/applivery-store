@@ -23,7 +23,7 @@
       <template v-else>
         <v-toolbar-title >
           <router-link :to="{name:'list'}">
-            <!-- {{ $t('Toolbar.genericTitle') }} -->
+            {{ $t('Toolbar.genericTitle') }}
           </router-link>
         </v-toolbar-title>
         <v-spacer/>
