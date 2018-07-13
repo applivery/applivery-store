@@ -15,17 +15,19 @@
       >
         <v-icon>arrow_back</v-icon>
       </v-btn>
-      <v-toolbar-title >
-        <router-link :to="{name:'list'}">
-          <template v-if="custom.logo">
-            <img :src="custom.logo" class="logo">
-          </template>
-          <template v-else>
-            {{ $t('Toolbar.genericTitle') }}
-          </template>
-        </router-link>
-      </v-toolbar-title>
-      <v-spacer/>
+      <div 
+        v-if="custom.logo"
+        :style="{backgroundImage:`url(${custom.logo})`}"
+        class="toolbar-logo"
+      />
+      <template v-else>
+        <v-toolbar-title >
+          <router-link :to="{name:'list'}">
+            <!-- {{ $t('Toolbar.genericTitle') }} -->
+          </router-link>
+        </v-toolbar-title>
+        <v-spacer/>
+      </template>
       <v-toolbar-side-icon @click="openSidebar"/>
     </template>
     <template v-else>
@@ -59,8 +61,12 @@ export default {
 }
 </script>
 <style lang="scss">
-img.logo {
+.toolbar-logo {
+  flex: 1;
   height: 36px;
-  vertical-align: middle;
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-left: 16px;
 }
 </style>
