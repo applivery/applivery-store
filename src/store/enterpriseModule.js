@@ -1,6 +1,8 @@
 import * as api from '@/lib/api'
 import get from 'lodash/get'
 
+const GENERIC_DOMAINS = ['store.applivery.com', 'localhost']
+
 const state = {
   enterprise: null,
 }
@@ -8,8 +10,10 @@ const state = {
 const actions = {
   async init({ commit }) {
     const domain = window.__testHostname || window.location.hostname
-    const enterprise = await api.getEnterprise(domain)
-    commit('SET_ENTERPRISE', enterprise)
+    if (!~GENERIC_DOMAINS.indexOf(domain)) {
+      const enterprise = await api.getEnterprise(domain)
+      commit('SET_ENTERPRISE', enterprise)
+    }
   },
 }
 

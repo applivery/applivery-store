@@ -52,14 +52,16 @@ describe('normal flow', () => {
     cy.url().should('not.contain', 'history')
   })
 
-  it('should download apk', () => {
-    cy.contains('INSTALL').click()
-    cy.url().should('contain', 'dashboard')
+  it('should show install button', () => {
+    cy.contains('INSTALL')
   })
 
-  it('should go back to list', () => {
-    cy.visitUA('/', 'ANDROID')
-    // cy.contains('INSTALL').click()
-    // cy.url().should('contain', 'dashboard')
-  })
+  // it('should download apk', () => {
+  //   cy.contains('INSTALL').click()
+  //   cy.url().should('contain', 'dashboard')
+  // })
+
+  // it('should go back to list', () => {
+  //   cy.visitUA('/', 'ANDROID')
+  // })
 })
